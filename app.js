@@ -1,11 +1,12 @@
-const express = require('express'),
-    bodyParser = require('body-parser'),
-    // In order to use PUT HTTP verb to edit item
-    methodOverride = require('method-override'),
-    // Mitigate XSS using sanitizer
-    sanitizer = require('sanitizer'),
-    app = express(),
-    const port = process.env.PORT || 3000;
+const express = require('express');
+const bodyParser = require('body-parser');
+// In order to use PUT HTTP verb to edit item
+const methodOverride = require('method-override');
+// Mitigate XSS using sanitizer
+const sanitizer = require('sanitizer');
+
+const app = express();
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({
     extended: false
